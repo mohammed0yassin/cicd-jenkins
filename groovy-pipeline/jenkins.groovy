@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
-        maven "3.8.5"
+        maven "'apache-maven-3.8.1'"
     }
 
     stages {
