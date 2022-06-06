@@ -14,6 +14,7 @@ pipeline {
                 git 'https://github.com/mohammed0yassin/cicd-jenkins-slave1'
 
                 // Run Maven on a Unix agent.
+                sh "mvn compile"
                 sh "mvn spring-boot:run"
 
                 // To run Maven on a Windows agent, use
@@ -27,6 +28,7 @@ pipeline {
                 git 'https://github.com/mohammed0yassin/cicd-jenkins-slave2'
 
                 // Run Maven on a Unix agent.
+                sh "mvn compile"
                 sh "mvn spring-boot:run"
 
                 // To run Maven on a Windows agent, use
