@@ -21,7 +21,6 @@ pipeline {
             }
         }
     }
-    stages {
         stage('Run software on slave 2') {
             agent { label 'slave2-build' }
             steps {
@@ -35,5 +34,4 @@ pipeline {
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
-    }
 }
