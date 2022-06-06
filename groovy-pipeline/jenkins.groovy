@@ -24,7 +24,7 @@ pipeline {
             agent { label 'slave2-build' }
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/mohammed0yassin/cicd-jenkins/tree/master/slave2-files'
+                git 'https://github.com/mohammed0yassin/cicd-jenkins-slave2'
 
                 // Run Maven on a Unix agent.
                 sh "mvn spring-boot:run"
