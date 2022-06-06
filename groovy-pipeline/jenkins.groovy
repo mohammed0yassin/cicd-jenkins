@@ -2,7 +2,6 @@ pipeline {
     agent none
 
     tools {
-        // Install the Maven version configured as "M3" and add it to the path.
         maven "apache-maven-3.8.1"
     }
 
@@ -17,8 +16,6 @@ pipeline {
                 sh "mvn compile"
                 sh "mvn spring-boot:run &"
 
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
         stage('Run software on slave 2') {
@@ -29,10 +26,8 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 sh "mvn compile"
-                sh "mvn spring-boot:run"
+                sh "mvn spring-boot:run &"
 
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
     }
