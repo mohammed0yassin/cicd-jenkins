@@ -14,7 +14,8 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 sh "mvn compile"
-                sh "nohup mvn spring-boot:run &"
+                sh "nohup mvn spring-boot:start &"
+                
 
             }
         }
@@ -26,7 +27,7 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 sh "mvn compile"
-                sh "nohup mvn spring-boot:run &"
+                sh "nohup mvn spring-boot:start &"
 
             }
         }
